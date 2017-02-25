@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "ESLint plugin for generating a configuration automatically based on a repository's editorconfig.",
   "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint \"**/*.js\"",
+    "test": "npm run lint"
+  },
   "repository": "https://github.com/platinumazure/eslint-plugin-editorconfig.git",
   "author": "Kevin Partington <kevin.partington@kernelpanicstudios.com>",
   "license": "MIT",
   "dependencies": {
     "editorconfig": "^0.13.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1"
   }
 }
