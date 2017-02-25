@@ -3,7 +3,7 @@
  * @author Kevin Partington
  */
 
-const { describe, it } = require("mocha");
+const { beforeEach, describe, it } = require("mocha");
 const assert = require("chai").assert;
 const convertToESLint = require("../../lib/convert-to-eslint");
 
