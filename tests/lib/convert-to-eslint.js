@@ -107,4 +107,46 @@ describe("convert-to-eslint", function() {
             });
         });
     });
+
+    describe("linebreak-style", function() {
+        describe("end_of_line=crlf", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    end_of_line: "crlf"
+                });
+            });
+
+            it("should result in linebreak-style: [\"error\", \"windows\"]", function() {
+                assert.deepEqual(this.result, {
+                    "linebreak-style": ["error", "windows"]
+                });
+            });
+        });
+
+        describe("end_of_line=lf", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    end_of_line: "lf"
+                });
+            });
+
+            it("should result in linebreak-style: [\"error\", \"unix\"]", function() {
+                assert.deepEqual(this.result, {
+                    "linebreak-style": ["error", "unix"]
+                });
+            });
+        });
+
+        describe("end_of_line=cr", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    end_of_line: "cr"
+                });
+            });
+
+            it("should result in no linebreak-style rule", function() {
+                assert.notProperty(this.result, "linebreak-style");
+            });
+        });
+    });
 });
