@@ -149,4 +149,32 @@ describe("convert-to-eslint", function() {
             });
         });
     });
+
+    describe("no-trailing-spaces", function() {
+        describe("trim_trailing_whitespace=true", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    trim_trailing_whitespace: true
+                });
+            });
+
+            it("should result in no-trailing-spaces: [\"error\"]", function() {
+                assert.deepEqual(this.result, {
+                    "no-trailing-spaces": ["error"]
+                });
+            });
+        });
+
+        describe("trim_trailing_whitespace=false", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    trim_trailing_whitespace: false
+                });
+            });
+
+            it("should result in no no-trailing-spaces rule", function() {
+                assert.notProperty(this.result, "no-trailing-spaces");
+            });
+        });
+    });
 });
