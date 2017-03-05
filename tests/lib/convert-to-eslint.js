@@ -207,4 +207,32 @@ describe("convert-to-eslint", function() {
             });
         });
     });
+
+    describe("max-len", function() {
+        describe("max_line_length is numeric", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    max_line_length: 80
+                });
+            });
+
+            it("should result in max-len: [\"error\", 80]", function() {
+                assert.deepEqual(this.result, {
+                    "max-len": ["error", 80]
+                });
+            });
+        });
+
+        describe("max_line_length: \"off\"", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    max_line_length: "off"
+                });
+            });
+
+            it("should result in no max-len rule", function() {
+                assert.notProperty(this.result, "max-len");
+            });
+        });
+    });
 });
