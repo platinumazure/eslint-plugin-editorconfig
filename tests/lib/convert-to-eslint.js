@@ -177,4 +177,34 @@ describe("convert-to-eslint", function() {
             });
         });
     });
+
+    describe("eol-last", function() {
+        describe("insert_final_newline=true", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    insert_final_newline: true
+                });
+            });
+
+            it("should result in eol-last: [\"error\", \"always\"]", function() {
+                assert.deepEqual(this.result, {
+                    "eol-last": ["error", "always"]
+                });
+            });
+        });
+
+        describe("insert_final_newline=false", function() {
+            beforeEach(function() {
+                this.result = convertToESLint({
+                    insert_final_newline: false
+                });
+            });
+
+            it("should result in eol-last: [\"error\", \"never\"]", function() {
+                assert.deepEqual(this.result, {
+                    "eol-last": ["error", "never"]
+                });
+            });
+        });
+    });
 });
