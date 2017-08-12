@@ -15,7 +15,8 @@
   "author": "Kevin Partington <kevin.partington@kernelpanicstudios.com>",
   "license": "MIT",
   "dependencies": {
-    "editorconfig": "^0.13.2"
+    "editorconfig": "^0.14.1",
+    "glob": "^7.1.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
