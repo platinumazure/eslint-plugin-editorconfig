@@ -29,9 +29,12 @@ describe("Functional tests", () => {
                 {
                     configs: {
                         auto: {
-                            rules: {
-                                indent: ["error", 4]
-                            }
+                            overrides: [{
+                                files: ["./**/*.js"],
+                                rules: {
+                                    indent: ["error", 4]
+                                }
+                            }]
                         }
                     }
                 }
@@ -44,7 +47,7 @@ describe("Functional tests", () => {
             process.chdir(path.resolve(__dirname, "../fixtures/nested"));
         });
 
-        it("generates correct ESLint config for top-level file", () => {
+        it("generates ESLint config with glob patterns for subdirectories", () => {
             const config = requireUncached("../..");
 
             assert.deepEqual(
@@ -52,10 +55,18 @@ describe("Functional tests", () => {
                 {
                     configs: {
                         auto: {
-                            rules: {
-                                "eol-last": ["error", "always"],
-                                indent: ["error", "tab"]
-                            }
+                            overrides: [{
+                                files: ["./**/*.js"],
+                                rules: {
+                                    "eol-last": ["error", "always"],
+                                    indent: ["error", "tab"]
+                                }
+                            }, {
+                                files: ["subdir/**/*.js"],
+                                rules: {
+                                    indent: ["error", 4]
+                                }
+                            }]
                         }
                     }
                 }
