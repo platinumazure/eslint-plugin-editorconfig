@@ -183,7 +183,7 @@ describe("convert-to-eslint", function() {
             describe("insert_final_newline=true", function() {
                 beforeEach(function() {
                     this.result = convertToESLint({
-                        insert_final_newline: true
+                        insert_final_newline: "true"
                     });
                 });
 
@@ -197,7 +197,7 @@ describe("convert-to-eslint", function() {
             describe("insert_final_newline=false", function() {
                 beforeEach(function() {
                     this.result = convertToESLint({
-                        insert_final_newline: false
+                        insert_final_newline: "false"
                     });
                 });
 
