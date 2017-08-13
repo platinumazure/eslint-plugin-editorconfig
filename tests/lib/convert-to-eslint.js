@@ -13,7 +13,7 @@ describe("convert-to-eslint", function() {
             describe("2 spaces", function() {
                 beforeEach(function() {
                     this.result = convertToESLint({
-                        indent_size: 2,
+                        indent_size: "2",
                         indent_style: "space"
                     });
                 });
@@ -28,7 +28,7 @@ describe("convert-to-eslint", function() {
             describe("4 spaces", function() {
                 beforeEach(function() {
                     this.result = convertToESLint({
-                        indent_size: 4,
+                        indent_size: "4",
                         indent_style: "space"
                     });
                 });
