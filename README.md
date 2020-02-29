@@ -18,7 +18,7 @@ a repository's `.editorconfig` file.
 
 ## Unused properties:
 
-Unused properties from [properties](https://editorconfig.org/#supported-properties):
+These [properties](https://editorconfig.org/#supported-properties) are unused:
 
 - `tab_width`
 - `charset`
