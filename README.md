@@ -9,7 +9,7 @@ a repository's `.editorconfig` file.
 ## Supported properties (mapped to ESLint rule)
 
 |`.editorconfig` [properties](https://editorconfig.org/#supported-properties)|ESLint rule|ESLint options
-|--------------------------|-----------|
+|--------------------------|-----------|-----|
 |`indent_style` and `indent_size`|[`indent`](https://eslint.org/docs/rules/indent)|"tab" or number
 |`end_of_line`|[`linebreak-style`](https://eslint.org/docs/rules/linebreak-style)|"unix"\|"windows"
 |`trim_trailing_whitespace`|[`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)|Not used
