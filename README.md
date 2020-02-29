@@ -6,17 +6,20 @@
 ESLint plugin which generates some core ESLint rules' configuration based on
 a repository's `.editorconfig` file.
 
-## Supported [properties](https://editorconfig.org/#supported-properties) (mapped to ESLint rule)
+## Supported properties (mapped to ESLint rule)
 
-|`.editorconfig` properties|ESLint rule|
+|`.editorconfig` [properties](https://editorconfig.org/#supported-properties)|ESLint rule|ESLint options
 |--------------------------|-----------|
-|`indent_style` and `indent_size`|[`indent`](https://eslint.org/docs/rules/indent)
-|`end_of_line`|[`linebreak-style`](https://eslint.org/docs/rules/linebreak-style)|
-|`trim_trailing_whitespace`|[`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)|
-|`insert_final_newline`|[`eol-last`](https://eslint.org/docs/rules/eol-last)|
-|`max_line_length`|[`max-len`](https://eslint.org/docs/rules/max-len)|
+|`indent_style` and `indent_size`|[`indent`](https://eslint.org/docs/rules/indent)|"tab" or number
+|`end_of_line`|[`linebreak-style`](https://eslint.org/docs/rules/linebreak-style)|"unix"\|"windows"
+|`trim_trailing_whitespace`|[`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)|Not used
+|`insert_final_newline`|[`eol-last`](https://eslint.org/docs/rules/eol-last)|"always"\|"never"
+|`max_line_length`|[`max-len`](https://eslint.org/docs/rules/max-len)|Number option only
 
-## Unused [properties](https://editorconfig.org/#supported-properties):
+## Unused properties:
+
+Unused properties from [properties](https://editorconfig.org/#supported-properties):
+
 - `tab_width`
 - `charset`
 - `root`
