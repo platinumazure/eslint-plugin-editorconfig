@@ -6,6 +6,8 @@
 ESLint plugin which generates some core ESLint rules' configuration based on
 a repository's `.editorconfig` file.
 
+**Warning:** This plugin is highly experimental and is probably not suitable for production use at this time. There are also some known limitations, including the fact that nested .editorconfig files will not work correctly. Use at your own risk.
+
 ## Supported properties (mapped to ESLint rule)
 
 |`.editorconfig` [properties](https://editorconfig.org/#supported-properties)|ESLint rule|ESLint options
