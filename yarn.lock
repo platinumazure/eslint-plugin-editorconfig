@@ -217,9 +217,9 @@ doctrine@^1.2.2:
     esutils "^2.0.2"
     isarray "^1.0.0"
 
-editorconfig@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/editorconfig/-/editorconfig-0.14.0.tgz#e9d7ad4fc72250f745bb98870915e8025c7185e8"
+editorconfig@^0.14.1:
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/editorconfig/-/editorconfig-0.14.2.tgz#60fe3336878f38d6e19e0b16cf1f41903f57e6f4"
   dependencies:
     bluebird "^3.0.5"
     commander "^2.9.0"
@@ -656,8 +656,8 @@ lodash.keys@^3.0.0:
     lodash.isarray "^3.0.0"
 
 lodash@^4.0.0, lodash@^4.3.0:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 lru-cache@^3.2.0:
   version "3.2.0"
