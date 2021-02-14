@@ -1,5 +1,4 @@
 # eslint-plugin-editorconfig
-[![Build Status](https://travis-ci.org/platinumazure/eslint-plugin-editorconfig.svg?branch=master)](https://travis-ci.org/platinumazure/eslint-plugin-editorconfig)
 [![Dependency Status](https://david-dm.org/platinumazure/eslint-plugin-editorconfig/status.svg)](https://david-dm.org/platinumazure/eslint-plugin-editorconfig)
 [![devDependency Status](https://david-dm.org/platinumazure/eslint-plugin-editorconfig/dev-status.svg)](https://david-dm.org/platinumazure/eslint-plugin-editorconfig?type=dev)
 
